@@ -1,92 +1,82 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/projects">Projects</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
+    </nav>
   </header>
+
   <main>
     <RouterView />
+
+    <div class="background"></div>
   </main>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+  background-color: rgba(29, 27, 27, 0.4);
+  border-radius: 1rem;
+  bottom: 3rem;
+  left: 50%;
+  padding: 1rem 2rem;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 15;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
+  align-items: center;
+  border-radius: 1rem;
+  display: flex;
+  font-size: 0.875rem;
   text-align: center;
-  margin-top: 2rem;
-}
-
-main {
-  background-color: #fff;
-  height: 100vh;
-  width: 100vw;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  width: 100%;
+  z-index: 15;
 }
 
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  color: #fff;
+  margin-right: 1.25rem;
+  text-decoration: none;
 }
 
-nav a:first-of-type {
-  border: 0;
+nav a:last-of-type {
+  margin-right: 0;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+main {
+  background-color: #0f050e;
+  border-radius: 1rem;
+  height: calc(100vh - 4rem);
+  overflow: hidden;
+  position: relative;
+  width: calc(100vw - 4rem);
+}
+
+.background {
+  background-color: #e4a0ff;
+  position: absolute;
+  bottom: -3rem;
+  left: -50%;
+  height: 8rem;
+  width: 200%;
+  filter: blur(4rem);
+}
+
+@keyframes move-left {
+  0% {
+    left: 0;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  to {
+    left: -100%;
   }
 }
 </style>
