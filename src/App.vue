@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import TheHeader from './components/TheHeader.vue'
+import BackgroundAnimation from './components/BackgroundAnimation.vue'
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import TheHeader from './components/TheHeader.vue'
   <main>
     <RouterView />
 
-    <div class="background"></div>
+    <BackgroundAnimation />
   </main>
 </template>
 
@@ -26,31 +27,11 @@ header {
 }
 
 main {
-  background-color: #0f050e;
+  background: linear-gradient(to top, #3fa3ab 0%, #79b6b4 100%);
   border-radius: 1rem;
   height: var(--screen-height);
   overflow: hidden;
   position: relative;
   width: var(--screen-width);
-}
-
-.background {
-  background-color: #e4a0ff;
-  position: absolute;
-  bottom: -3rem;
-  left: -50%;
-  height: 8rem;
-  width: 200%;
-  filter: blur(4rem);
-}
-
-@keyframes move-left {
-  0% {
-    left: 0;
-  }
-
-  to {
-    left: -100%;
-  }
 }
 </style>

@@ -1,50 +1,37 @@
 <template>
   <div class="container">
-
-    <h2>
-      SOFTWARE<br />
-      DEVELOPER
-    </h2>
-
-    <h1>
-      DANIEL<br />
-      RODRIGUES
-    </h1>
-
+    <div>
+      <h1>
+        DANIEL<br />
+        RODRIGUES
+      </h1>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .container {
-  justify-content: space-between;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  padding: 4rem 4rem 12rem;
   height: 100%;
+  justify-content: center;
+  padding: 4rem 4rem 12rem;
   width: 100%;
 }
 
-h1,
-h2 {
+h1 {
+  color: var(--color-text);
   font-family: var(--font-title);
   font-size: 6rem;
   font-weight: 500;
   line-height: 5.5rem;
   letter-spacing: -2px;
-}
-
-h1 {
-  text-align: right;
-}
-
-h2 {
-  text-align: left;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
 
-  h1,
-  h2 {
+  h1 {
     font-size: 3rem;
     line-height: 3rem;
   }

@@ -1,8 +1,12 @@
 :root {
   --font-body: 'Poppins', sans-serif;
   --font-title: 'Libre Franklin', sans-serif;
+
   --screen-height: calc(100vh - 4rem);
   --screen-width: calc(100vw - 4rem);
+
+  --color-text: #F4F0F0;
+  --bg-color-out: #F4F0F0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +27,8 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color-out);
+  color: var(---color-text);
   font-family: var(--font-body);
   font-size: 1rem;
   min-height: 100vh;
