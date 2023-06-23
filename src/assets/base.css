@@ -1,4 +1,8 @@
 :root {
+  --font-body: 'Poppins', sans-serif;
+  --font-title: 'Libre Franklin', sans-serif;
+  --screen-height: calc(100vh - 4rem);
+  --screen-width: calc(100vw - 4rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -8,17 +12,20 @@
 *,
 *::before,
 *::after {
+  border: none;
   box-sizing: border-box;
-  margin: 0;
   font-weight: normal;
+  margin: 0;
+  outline: none;
+  padding: 0;
 }
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background: var(--color-background);
-  color: var(--color-text);
-  font-family: 'Poppins', sans-serif;
+  /* background: var(--color-background);
+  color: var(--color-text); */
+  font-family: var(--font-body);
   font-size: 1rem;
   min-height: 100vh;
   text-rendering: optimizeLegibility;

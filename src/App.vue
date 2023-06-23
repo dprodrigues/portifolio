@@ -1,16 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import TheHeader from './components/TheHeader.vue'
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
-    </nav>
-  </header>
+  <TheHeader />
 
   <main>
     <RouterView />
@@ -31,33 +25,13 @@ header {
   z-index: 15;
 }
 
-nav {
-  align-items: center;
-  border-radius: 1rem;
-  display: flex;
-  font-size: 0.875rem;
-  text-align: center;
-  width: 100%;
-  z-index: 15;
-}
-
-nav a {
-  color: #fff;
-  margin-right: 1.25rem;
-  text-decoration: none;
-}
-
-nav a:last-of-type {
-  margin-right: 0;
-}
-
 main {
   background-color: #0f050e;
   border-radius: 1rem;
-  height: calc(100vh - 4rem);
+  height: var(--screen-height);
   overflow: hidden;
   position: relative;
-  width: calc(100vw - 4rem);
+  width: var(--screen-width);
 }
 
 .background {
