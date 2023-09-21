@@ -1,31 +1,21 @@
-<script>
-import { RouterLink } from 'vue-router';
-
-export default {
-  components: {
-    RouterLink,
-  },
-}
-</script>
-
 <template>
   <header>
     <nav>
       <ul>
         <li>
-          <RouterLink to="/">Home</RouterLink>
+          <NuxtLink to="/">Home</NuxtLink>
         </li>
 
         <li>
-          <RouterLink to="/about">About</RouterLink>
+          <NuxtLink to="/about">About</NuxtLink>
         </li>
 
         <li>
-          <RouterLink to="/projects">Projects</RouterLink>
+          <NuxtLink to="/projects">Projects</NuxtLink>
         </li>
 
         <li>
-          <RouterLink to="/contact">Contact</RouterLink>
+          <NuxtLink to="/contact">Contact</NuxtLink>
         </li>
       </ul>
     </nav>
