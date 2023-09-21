@@ -1,6 +1,6 @@
 @import './base.css';
 
-#app {
+#__nuxt {
   align-items: center;
   color: #fff;
   display: flex;

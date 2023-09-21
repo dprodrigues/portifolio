@@ -1,3 +1,9 @@
+<script setup>
+const { data } = await useWeather()
+
+console.log('data:', data)
+</script>
+
 <template>
   <div class="container">
     <div>

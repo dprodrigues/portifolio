@@ -1,4 +1,4 @@
-const { getWeather } = require("../api/weather");
+const { getWeather } = require("../../api/weather");
 
 module.exports = {
   async getCurrentTemperature(req, res) {

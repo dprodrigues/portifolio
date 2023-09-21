@@ -1,14 +1,15 @@
-<script setup>
-import { RouterView } from 'vue-router'
-import TheHeader from './components/TheHeader.vue'
-import BackgroundAnimation from './components/BackgroundAnimation.vue'
+<script>
+import HeaderComponent from '../components/HeaderComponent.vue'
+import BackgroundAnimation from '../components/BackgroundAnimation.vue'
+import '~/assets/base.css'
+import '~/assets/main.css'
 </script>
 
 <template>
-  <TheHeader />
+  <HeaderComponent />
 
   <main>
-    <RouterView />
+    <slot />
 
     <BackgroundAnimation />
   </main>
@@ -29,9 +30,9 @@ header {
 main {
   background: linear-gradient(to top, #3fa3ab 0%, #79b6b4 100%);
   border-radius: 1rem;
-  height: var(--screen-height);
+  height: calc(100vh - 4rem);
   overflow: hidden;
   position: relative;
-  width: var(--screen-width);
+  width: calc(100vw - 4rem);
 }
 </style>
