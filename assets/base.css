@@ -2,8 +2,8 @@
   --font-body: 'Poppins', sans-serif;
   --font-title: 'Libre Franklin', sans-serif;
 
-  --screen-height: calc(100vh - 4rem);
-  --screen-width: calc(100vw - 4rem);
+  --screen-height: calc(100vh - 3rem);
+  --screen-width: calc(100vw - 3rem);
 
   --color-text: #F4F0F0;
   --bg-color-out: #F4F0F0;

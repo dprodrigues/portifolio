@@ -1,38 +1,46 @@
 <script>
-import HeaderComponent from '../components/HeaderComponent.vue'
-import BackgroundAnimation from '../components/BackgroundAnimation.vue'
+import Header from '../components/Header.vue'
 import '~/assets/base.css'
 import '~/assets/main.css'
+
+export default {
+  components: {
+    Header,
+  }
+}
 </script>
 
 <template>
-  <HeaderComponent />
+  <Header />
 
   <main>
     <slot />
-
-    <BackgroundAnimation />
   </main>
 </template>
 
 <style scoped>
-header {
-  background-color: rgba(29, 27, 27, 0.4);
-  border-radius: 1rem;
-  bottom: 3rem;
-  left: 50%;
-  padding: 1rem 2rem;
-  position: fixed;
-  transform: translateX(-50%);
-  z-index: 15;
-}
-
 main {
+  animation: BackgroundAnimation 30s ease infinite;
+  background-size: 400% 400%;
   background: linear-gradient(to top, #3fa3ab 0%, #79b6b4 100%);
   border-radius: 1rem;
-  height: calc(100vh - 4rem);
+  height: var(--screen-height);
   overflow: hidden;
   position: relative;
-  width: calc(100vw - 4rem);
+  width: var(--screen-width);
+}
+
+@keyframes BackgroundAnimation {
+  0% {
+    background-position: 75% 0%
+  }
+
+  50% {
+    background-position: 25% 100%
+  }
+
+  100% {
+    background-position: 75% 0%
+  }
 }
 </style>

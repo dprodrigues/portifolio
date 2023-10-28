@@ -1,16 +1,14 @@
-<script setup>
-const { data } = await useWeather()
-
-console.log('data:', data)
-</script>
-
 <template>
   <div class="container">
     <div>
-      <h1>
+      <p class="subtitle subtitle-1">Hi, my name is</p>
+
+      <h1 class="title">
         DANIEL<br />
         RODRIGUES
       </h1>
+
+      <p class="subtitle subtitle-2">and I am a Software Developer</p>
     </div>
   </div>
 </template>
@@ -25,18 +23,29 @@ console.log('data:', data)
   width: 100%;
 }
 
-h1 {
+.title {
   color: var(--color-text);
   font-family: var(--font-title);
   font-size: 6rem;
   font-weight: 500;
   line-height: 5.5rem;
   letter-spacing: -2px;
-  text-align: center;
+}
+
+.subtitle {
+  color: var(--color-text);
+  font-family: var(--font-title);
+}
+
+.subtitle-1 {
+  margin-left: 6px;
+}
+
+.subtitle-2 {
+  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
-
   h1 {
     font-size: 3rem;
     line-height: 3rem;

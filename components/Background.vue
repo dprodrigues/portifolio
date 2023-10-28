@@ -1,14 +1,16 @@
 <template>
-  <div class="wave wave-1"></div>
-  <div class="wave wave-2"></div>
-  <div class="wave wave-3"></div>
+  <div>
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
 </template>
 
 <style scoped>
 .wave {
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   background: url(../assets/wave.svg) repeat-x;
-  bottom: -3rem;
+  bottom: -1rem;
   filter: blur(2rem);
   height: 198px;
   position: absolute;
@@ -18,7 +20,7 @@
 .wave-2 {
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
   filter: blur(3rem);
-  bottom: -6rem;
+  bottom: -2rem;
   opacity: 1;
 }
 
