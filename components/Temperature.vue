@@ -22,16 +22,19 @@ export default {
       loading: true,
     };
   },
-  created() {
+  mounted() {
     this.fetchWeather();
   },
   methods: {
     async fetchWeather() {
       try {
-        const data = await fetch('/api/weather/get-temperature').then((response) => response.json());
+        const data = await fetch('/api/weather/getTemperature').then((response) => response.json());
 
-        this.currentTemperature = data.current.temp_c;
-        this.currentWeatherIcon = data.current.condition.icon;
+        if (data) {
+          this.currentTemperature = data.current.temp_c;
+          this.currentWeatherIcon = data.current.condition.icon;
+        }
+
       } catch (error) {
         console.error('Error fetching weather:', error);
       } finally {
