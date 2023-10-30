@@ -25,10 +25,6 @@ export default {
         </li>
 
         <li>
-          <NuxtLink to="/projects">Projects</NuxtLink>
-        </li>
-
-        <li>
           <NuxtLink to="/contact">Contact</NuxtLink>
         </li>
       </ul>
@@ -50,6 +46,7 @@ nav {
 header {
   align-items: center;
   background-color: rgba(29, 27, 27, 0.4);
+  backdrop-filter: blur(12px);
   border-radius: 1rem;
   bottom: 3rem;
   justify-content: space-between;

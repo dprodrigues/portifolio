@@ -8,7 +8,7 @@
         RODRIGUES
       </h1>
 
-      <p class="subtitle subtitle-2">and I am a Software Developer</p>
+      <p class="subtitle subtitle-2">and I am a Software Engineer</p>
     </div>
   </div>
 </template>
