@@ -1,6 +1,6 @@
 # Daniel Rodrigues
 
-This portifolio were created with Vue for study purpuses
+This portfolio were created with Vue for study purposes
 
 ## Running
 
