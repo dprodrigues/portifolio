@@ -1,3 +1,11 @@
+<template>
+  <div class="container">
+    <Date />
+
+    <Clock />
+  </div>
+</template>
+
 <script>
 import Clock from './Clock.vue';
 import Date from './Date.vue';
@@ -9,14 +17,6 @@ export default {
   }
 }
 </script>
-
-<template>
-  <div class="container">
-    <Date />
-
-    <Clock />
-  </div>
-</template>
 
 <style scoped>
 .container {

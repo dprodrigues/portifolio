@@ -1,15 +1,3 @@
-<script>
-import TimeAndDate from './TimeAndDate.vue';
-import Temperature from './Temperature.vue';
-
-export default {
-  components: {
-    TimeAndDate,
-    Temperature,
-  }
-}
-</script>
-
 <template>
   <header>
     <Temperature />
@@ -33,6 +21,18 @@ export default {
     <TimeAndDate />
   </header>
 </template>
+
+<script>
+import TimeAndDate from './TimeAndDate.vue';
+import Temperature from './Temperature.vue';
+
+export default {
+  components: {
+    TimeAndDate,
+    Temperature,
+  }
+}
+</script>
 
 <style scoped>
 header,
