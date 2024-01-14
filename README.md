@@ -1,17 +1,17 @@
 # Daniel Rodrigues
 
-This portfolio were created with Vue for study purposes
+My website :D
 
 ## Running
 
 Install dependencies
 
 ```sh
-$ npm i
+$ yarn
 ```
 
 Run in dev mode
 
 ```sh
-$ npm run dev
+$ yarn dev
 ```
