@@ -16,14 +16,9 @@ export const Container = styled.div`
   }
 `
 
-export const Subtitle = styled.p`
-  color: var(--color-text);
-  font-family: var(--font-title);
-`
+export const Subtitle = styled.p``
 
 export const Title = styled.h1`
-  color: var(--color-text);
-  font-family: var(--font-title);
   font-size: 6rem;
   font-weight: 500;
   line-height: 5.5rem;
