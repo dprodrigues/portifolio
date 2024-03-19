@@ -1,26 +1,20 @@
 'use client'
 
 import NextLink from 'next/link'
-import styled, { css } from 'styled-components'
-
-const centerCss = css`
-  display: flex;
-  left: 50%;
-  position: fixed;
-  transform: translateX(-50%);
-`
+import styled from 'styled-components'
 
 export const Container = styled.header`
-  ${centerCss}
-
   align-items: center;
-  background-color: rgba(29, 27, 27, 0.4);
   backdrop-filter: blur(12px);
+  background-color: rgba(29, 27, 27, 0.4);
   border-radius: 1rem;
   bottom: 3rem;
+  display: flex;
   justify-content: space-between;
+  left: 50%;
   padding: 0 3rem;
   padding: 0.75rem 2rem;
+  position: fixed;
   transform: translateX(-50%);
   width: calc(var(--screen-width) - 5rem);
   z-index: 5;
